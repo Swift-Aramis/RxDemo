@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImagePickerVC" customModule="RxDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="cameraBtn" destination="gZd-7R-cgU" id="NMz-0d-z6J"/>
+                <outlet property="cropBtn" destination="ec5-Es-gCX" id="7yS-6f-1DC"/>
+                <outlet property="galleryBtn" destination="3o8-nl-B1Q" id="5fM-q5-tFb"/>
+                <outlet property="selectedImgV" destination="Nny-Tv-rnn" id="Gcx-vG-3rL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nny-Tv-rnn">
+                    <rect key="frame" x="30" y="50" width="315" height="200"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="rvh-zM-0c4"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZd-7R-cgU">
+                    <rect key="frame" x="160.5" y="280" width="54" height="30"/>
+                    <state key="normal" title="Camera"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3o8-nl-B1Q">
+                    <rect key="frame" x="163.5" y="340" width="48" height="30"/>
+                    <state key="normal" title="Gallery"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec5-Es-gCX">
+                    <rect key="frame" x="170.5" y="400" width="34" height="30"/>
+                    <state key="normal" title="Crop"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gZd-7R-cgU" firstAttribute="centerX" secondItem="Nny-Tv-rnn" secondAttribute="centerX" id="0eD-UZ-3ek"/>
+                <constraint firstItem="Nny-Tv-rnn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="1BX-GM-JJQ"/>
+                <constraint firstItem="3o8-nl-B1Q" firstAttribute="centerX" secondItem="Nny-Tv-rnn" secondAttribute="centerX" id="Gdz-Je-dJo"/>
+                <constraint firstItem="3o8-nl-B1Q" firstAttribute="top" secondItem="gZd-7R-cgU" secondAttribute="bottom" constant="30" id="KAV-Hw-6Ms"/>
+                <constraint firstAttribute="trailing" secondItem="Nny-Tv-rnn" secondAttribute="trailing" constant="30" id="hIC-zq-miE"/>
+                <constraint firstItem="Nny-Tv-rnn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="hyv-PX-kp1"/>
+                <constraint firstItem="ec5-Es-gCX" firstAttribute="top" secondItem="3o8-nl-B1Q" secondAttribute="bottom" constant="30" id="kXK-0U-KSp"/>
+                <constraint firstItem="ec5-Es-gCX" firstAttribute="centerX" secondItem="Nny-Tv-rnn" secondAttribute="centerX" id="mva-8V-dgh"/>
+                <constraint firstItem="gZd-7R-cgU" firstAttribute="top" secondItem="Nny-Tv-rnn" secondAttribute="bottom" constant="30" id="o25-jk-zOC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
